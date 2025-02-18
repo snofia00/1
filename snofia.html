@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Snöfia's Profile</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    width: 700px;
+    background: white;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 0px black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: #d9d9d9;
+    font-size: 14px;
+    border-bottom: 2px solid black;
+}
+
+.sidebar {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.social-links img {
+    width: 50px;
+    margin: 5px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+.hidden {
+    display: none;
+}</style></head> 
+ <body> 
+  <div class="profile-container"> <!-- Header Bar --> 
+   <div class="header"> <span class="icons">★</span> <span class="url-bar">https://.silly.profile</span> 
+   </div> <!-- Sidebar Profile --> 
+   <div class="sidebar"> 
+    <img src="https://github.com/user-attachments/assets/ed9796e9-c37e-49a6-bc26-54d85fb3f3c4" alt="Profile Picture" class="profile-pic"> 
+    <h1>Snöfia</h1> 
+    <p>@sofia.brodgry</p> 
+    <p>• Theirs • Female •</p> 
+    <p></p>★ INFJ 5w4 𐙚˙⋆.˚ 541 • sp/sx • ILI ★ 
+    <p></p> 
+    <div class="social-links"> <a href="https://www.instagram.com/sofia.gryning" target="_blank"> <img src="https://github.com/user-attachments/assets/abb9f309-33a5-484e-a24d-989df1834a2c" alt="Instagram"> </a> <a href="https://open.spotify.com/user/31ohtsz7i4pemqalzz2penggd2ke?si=x8caPdIURFG2Ea6hozqFnA" target="_blank"> <img src="https://github.com/user-attachments/assets/c428cbe4-c427-4b4f-aa27-df82d5da916c" alt="Spotify"> </a> <a href="#" onclick="toggleNSFW()"> <img src="https://github.com/user-attachments/assets/65f9c367-2912-45bc-8d6c-eb8b4657ff13" alt="NSFW Playlist"> </a> 
+    </div> 
+   </div> <!-- Main Content --> 
+   <div class="content"> 
+    <div class="section"> 
+     <h2>ABOUT ME</h2> 
+     <p>Music addiction, Cry of fear girl</p> 
+    </div> 
+    <div class="section"> 
+     <h2>INTERESTS</h2> 
+     <p>Philosophy, Music, Art, Learning</p> 
+    </div> 
+    <div class="section"> 
+     <h2>STATUS</h2> 
+     <p>Life: do not exist<br>Language: TH/EN<br>Born: 24/07/2004<br> PromptPay: +66 95 423 3760<br> </p> 
+    </div> 
+   </div> <!-- Hidden NSFW Playlist --> 
+   <div id="nsfw-menu" class="hidden"> <iframe src="https://open.spotify.com/embed/playlist/6rahFPznWERODfRlV9BKzh" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> <button onclick="toggleNSFW()">Close</button> 
+   </div> <!-- Footer --> 
+   <div class="footer"> <span id="datetime">Loading...</span> <span id="visitor-counter">• Visitors: 0 •</span> 
+   </div> 
+  </div> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// แสดงวันที่และเวลา
+function updateDateTime() {
+    let now = new Date();
+    let date = now.toLocaleDateString();
+    let time = now.toLocaleTimeString();
+    document.getElementById("datetime").innerText = `• ${time} • ${date} •`;
+}
+setInterval(updateDateTime, 1000);
+
+// นับจำนวนผู้เข้าชม
+let visitors = localStorage.getItem("visitors") || 0;
+visitors++;
+localStorage.setItem("visitors", visitors);
+document.getElementById("visitor-counter").innerText = `• Visitors: ${visitors} •`;
+
+// แสดง/ซ่อน NSFW Playlist
+function toggleNSFW() {
+    let menu = document.getElementById("nsfw-menu");
+    menu.classList.toggle("hidden");
+}
+
+// แสดง/ซ่อนข้อมูลในแต่ละ Section
+function toggleSection(id) {
+    let section = document.getElementById(id);
+    section.classList.toggle("hidden");
+}</script></body></html>ipt></body></html>
